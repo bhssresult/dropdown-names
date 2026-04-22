@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Redirect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    select, button {
+      padding: 8px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Select Option</h3>
+
+  <select id="dropdown">
+    <option value="">--Choose--</option>
+    <option value="https://example.com/page1">Page 1</option>
+    <option value="https://example.com/page2">Page 2</option>
+    <option value="https://example.com/page3">Page 3</option>
+  </select>
+
+  <br>
+
+  <button onclick="goToPage()">Submit</button>
+
+  <script>
+    function goToPage() {
+      var url = document.getElementById("dropdown").value;
+      if (url) {
+        window.location.href = url;
+      } else {
+        alert("Please select an option");
+      }
+    }
+  </script>
+
+</body>
+</html>
